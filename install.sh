@@ -159,7 +159,7 @@ fos_install(){
     tar -xzf /home/fos-streaming/fos-streaming_unpack_x84_64.tar.gz -C /home/fos-streaming/
     rm -rf /home/fos-streaming/fos/www/vendor /home/fos-streaming/fos/www/50x.html > /dev/null 2>&1
     cd /home/fos-streaming/fos/www  > /dev/null 2>&1
-    git clone https://github.com/vaniusha3/IPTV-MD.git  > /dev/null 2>&1
+    git clone https://github.com/cabralfilho/IPTV-MD.git  > /dev/null 2>&1
     cp -R /home/fos-streaming/fos/www/IPTV-MD/* /home/fos-streaming/fos/www/  > /dev/null 2>&1
 
     echo 'www-data ALL = (root) NOPASSWD: /usr/local/bin/ffmpeg' >> /etc/sudoers  > /dev/null 2>&1
@@ -196,8 +196,8 @@ startfos(){
 
 ffmpeg()
 {
-    wget http://johnvansickle.com/ffmpeg/releases/ffmpeg-release-64bit-static.tar.xz -O /home/fos-streaming/ffmpeg-release-64bit-static.tar.xz  > /dev/null 2>&1
-    tar -xJf /home/fos-streaming/ffmpeg-release-64bit-static.tar.xz -C /tmp/ > /dev/null 2>&1
+    wget https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64bit-static.tar.xz -O /home/fos-streaming/ffmpeg-release-amd64bit-static.tar.xz  > /dev/null 2>&1
+    tar -xJf /home/fos-streaming/ffmpeg-release-amd64bit-static.tar.xz -C /tmp/ > /dev/null 2>&1
     /bin/cp /tmp/ffmpeg*/ffmpeg  /usr/local/bin/ffmpeg
     /bin/cp /tmp/ffmpeg*/ffprobe /usr/local/bin/ffprobe
     chmod 755 /usr/local/bin/ffmpeg  > /dev/null 2>&1
@@ -254,6 +254,6 @@ fos_install
 database
 ffmpeg
 startfos
-#test
+test
 info
 
