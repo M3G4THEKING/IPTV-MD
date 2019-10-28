@@ -257,5 +257,5 @@ fos_install
 database
 ffmpeg
 startfos
-#test
+test
 info
